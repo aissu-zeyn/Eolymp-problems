@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{ 
+    long long n,r, nn; 
+    scanf ("%lld", &n);
+    
+    nn=2*n + ceil((2*sqrt(n)));
+    
+    printf ("%lld", nn); return 0; }
