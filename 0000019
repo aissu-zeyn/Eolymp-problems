@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std; 
+int main()
+{ 
+long long n;
+int i=0,c=0,s,say=0;
+cin>>n; 
+long long x=n;
+
+while(n>0)
+{ 
+n/=10;
+say++;
+} 
+
+int a[say];
+
+
+
+for (int k=0;k<say;k++)
+{ 
+
+a[k]=x%10; 
+x/=10;
+} 
+
+
+
+for(int j=0; j<say/2; j++) 
+{
+if(a[j]==a[say-j-1]) c++; 
+}
+
+if(say%2==1) c++;
+cout<<c; 
+
+}
