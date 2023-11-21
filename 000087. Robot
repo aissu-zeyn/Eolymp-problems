@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+	 string s;
+	 cin>>s; 
+    int mas[20000];
+    int d = 10000;
+    mas[10000] = 1;
+    int b=10000, v=10000;
+    for(char c : s)
+    {
+    	if (c == 'R') { d++; mas[d] = 1; v++ ; }
+    	if (c == 'L') { d--; mas[d] = 1; b--; }
+    }
+    int count=0;
+	for (int i = b; i <= v; i++)
+    {
+   		if(mas[i]==1)count++;
+    }
+    cout<<count;
+	return 0;
+}
