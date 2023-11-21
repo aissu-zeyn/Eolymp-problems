@@ -1,0 +1,11 @@
+#include <stdio.h>
+using namespace std;
+int main ()
+{
+    int n;
+    
+    while ( scanf ("%d", &n)==1 )
+    {
+        printf ("%d %d\n", 4*n, n*n);
+    }
+}
