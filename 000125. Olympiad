@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{ 
+    int h,m,s,a,b,c; 
+    cin>>h>>m>>s; 
+    cin>>a>>b>>c; 
+    a=a*3600; 
+    b=b*60; 
+    h=h*3600; 
+    m=m*60; 
+    
+    
+    c=(a+b+c)-(h+m+s); 
+    
+    h=c/3600; 
+    
+    c=c-(h*3600); 
+    
+    m=c/60; 
+    
+    c=c-(m*60); 
+    
+    s=c;
+    cout<<h<<" "<<m<<" "<<s;
+
+}
