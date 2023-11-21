@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int f(int n)
+{
+	int c=0;
+	while (n!=0)
+	{
+		c++;
+		n/=10;
+	}
+	return c;
+}
+
+
+int main ()
+{
+	int n,c=0,i;
+	cin>>n;
+	for (i=1;i<=7000;i++)
+{
+    c+=f(i);
+    if (n==c)
+    {
+    	cout<<i;
+    	return 0;
+	}
+}
+cout<<"0";
+return 0;
+}
