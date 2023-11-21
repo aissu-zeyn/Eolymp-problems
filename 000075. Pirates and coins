@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{ 
+int a,m,count=0,sum=0; 
+
+scanf("%d%d",&a,&m); 
+
+for(int i=a; i<m && sum<=m; i++)
+{ 
+sum+=i; 
+count++; 
+} 
+
+printf("%d",count-1); 
+}
