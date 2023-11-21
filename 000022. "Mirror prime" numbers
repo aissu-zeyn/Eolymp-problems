@@ -1,0 +1,37 @@
+#include <iostream>
+#define ll long long
+using namespace std; 
+int main() 
+{ 
+ll a,b; 
+cin>>a>>b; 
+ll say=0; 
+for(ll i=a; i<=b; i++) 
+{ 
+    bool t=true; bool f=false; 
+    ll r=0; 
+    ll c=i; 
+    while(c!=0) 
+    { 
+        ll son=c%10; 
+        r=r*10+son; 
+        c/=10; 
+        
+    } 
+    for(int u=2; u*u<=r; u++) 
+    { 
+        if(r%u==0) t=false; 
+        
+    } 
+    for(int j=2; j*j<=i; j++) 
+    { 
+        if(i%j==0) f=true; 
+        
+    } 
+    if(t==true && f==false) 
+    { say++; } 
+    
+}  
+ if (a==1) cout<<say-1;
+ else cout<<say; 
+}
