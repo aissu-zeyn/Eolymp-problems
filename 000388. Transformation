@@ -1,0 +1,23 @@
+#include <stdio.h> 
+using namespace std;
+int main()
+{
+    long long n,say=0;
+	scanf("%lld", &n);
+	
+	while (n!=1)
+	{
+	    if (n%2==0)
+	    {
+	       n/=2;
+	       say++;
+	    }
+	    else 
+	    {
+	        n+=1;
+	        say++;
+	    }
+	}
+	    printf ("%lld", say);
+
+}
