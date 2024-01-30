@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{ 
+int k,count=0; 
+float l; 
+scanf("%f%d",&l,&k); 
+
+do
+{ 
+l/=k; 
+count++; 
+}
+
+while(l>1);
+
+
+
+printf("%d",count-1); 
+}
