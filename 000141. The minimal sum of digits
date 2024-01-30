@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <algorithm>
+using namespace std;
+int main ()
+{
+    long long m,n,say;
+    
+    scanf ("%lld%lld", &m, &n);
+    int arr[55]={0};
+    
+    for (long long i=m;i<=n;i++)
+    {
+        long long temp=i;
+        long long sum=0;
+      while (temp!=0)
+      {
+          sum+=temp%10;
+          temp/=10;
+      }
+      arr[sum]++;
+    }
+    
+    for (long long i=0;i<55;i++)
+    {
+        if (arr[i]!=0)
+        {
+            printf ("%d", arr[i]);
+            return 0;
+        }
+    }
+    
+}
