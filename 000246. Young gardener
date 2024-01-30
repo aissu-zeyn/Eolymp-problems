@@ -1,0 +1,17 @@
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+    long long n,sum=0;
+    scanf ("%lld", &n);
+   
+   for (int i=n;i>=1;i--)
+   {
+       sum+=i;
+   }
+   sum=sum*2+1;
+    printf("%lld",sum);
+
+    return 0;
+}
