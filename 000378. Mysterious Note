@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char encoded_message[1001], code[27];
+    fgets(encoded_message, sizeof(encoded_message), stdin);
+    fgets(code, sizeof(code), stdin);
+
+    // Remove newline characters from input strings
+    if (encoded_message[strlen(encoded_message) - 1] == '\n') {
+        encoded_message[strlen(encoded_message) - 1] = '\0';
+    }
+    if (code[strlen(code) - 1] == '\n') {
+        code[strlen(code) - 1] = '\0';
+    }
+
+    // Create an array to store the code for each letter
+    char letter_map[26];
+    for (int i = 0; i < 26; i++) {
+        letter_map[i] = code[i];
+    }
+
+    // Decode the message using the letter map
+    int len = strlen(encoded_message);
+    char decoded_message[1001];
+    int j = 0;
+    for (int i = 0; i < len; i++) {
+        char c = encoded_message[i];
+        if (c == ' ') {
+            decoded_message[j++] = ' ';
+        } else {
+            decoded_message[j++] = letter_map[c - 'A'];
+        }
+    }
+    decoded_message[j] = '\0';
+
+    printf("%s\n", decoded_message);
+
+    return 0;
+}
